@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Page</title>
+    <style>
+        #main-product-image {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px black;
+            display: block;
+            margin: 20px auto;
+        }
+        .product-images {
+            height: 70px;
+            width: 70px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .product-images-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/img7.jfif" id="main-product-image"/>
+    <div class="product-images-container">
+        <img src="./img/img2.jfif" class="product-images" onclick="changeImage(1)"/>
+        <img src="./img/img3.jfif" class="product-images" onclick="changeImage(2)"/>
+        <img src="./img/img4.jfif" class="product-images" onclick="changeImage(3)"/>
+        <img src="./img/img6.jfif" class="product-images" onclick="changeImage(4)"/>
+        <img src="./img/img5.jfif" class="product-images" onclick="changeImage(5)"/>
+    </div>
+    <script>
+        function changeImage(num) {
+            const mainImage = document.getElementById('main-product-image');
+            if (num == 1) {
+                mainImage.src = "./img/img2.jfif"; // Change to the first thumbnail image
+            } else if (num == 2) {
+                mainImage.src = "./img/img3.jfif"; // Second thumbnail image
+            } else if (num == 3) {
+                mainImage.src = "./img/img4.jfif"; // Third thumbnail image
+            } else if (num == 4) {
+                mainImage.src = "./img/img6.jfif"; // Fourth thumbnail image
+            } else if (num == 5) {
+                mainImage.src = "./img/img5.jfif"; // Fifth thumbnail image
+            }
+        }
+    </script>
+</body>
+</html>
